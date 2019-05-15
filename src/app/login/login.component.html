@@ -1,0 +1,35 @@
+<div class="container-fluid text-center mcbox">
+<h1>  Login Your Application</h1>
+</div>
+<!-- (ngSubmit)="PostData(signUpForm)" -->
+<form [formGroup]='signUpForm' (ngSubmit)="application()">
+   
+      <div class="form-group col-sm-6">
+          <label for="inputEmail4">Email</label>
+       <input type="text" formControlName="Email"  class="form-control"  placeholder="Your Email Id">
+      </div>
+    
+      <div class="form-group col-sm-6">
+        <label for="inputPassword4">Password</label>
+       <input type="password" formControlName="userPassword" placeholder="Your Password" class="form-control">
+      </div>
+
+      
+      <div class="form-row text-center">
+        <div class="form-group col-sm-3"></div>
+           <div class="form-group col-sm-1">
+               <input type="submit"  value="Login" class="btn btn-outline-success" [disabled]='signUpForm.invalid' >
+            </div>
+            <div class="form-group col-sm-1">
+               <button type="button"(click)="restForm()" class="btn btn-info">Reset</button>
+            </div>
+      </div>
+</form>
+<div>
+  <b>New Candidate</b><button (click)="Registation()" class="btn btn-link"><b><u>Registation</u></b></button>
+</div>
+
+
+
+
+

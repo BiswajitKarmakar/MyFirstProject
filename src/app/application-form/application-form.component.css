@@ -1,0 +1,10 @@
+.mcbox{
+    height: 50px;
+    background-color: blue;
+}
+.cbox{
+    background-color: gray;
+}
+.pra{
+   text-emphasis-color: red; 
+}

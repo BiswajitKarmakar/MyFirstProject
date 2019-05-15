@@ -1,0 +1,26 @@
+<div class="container alert alert-info" >
+  
+
+
+  <form [formGroup]='EditPostForm' (ngSubmit)="editPost()">
+    <p class="text-center"><b><u>Update Your Data</u></b></p>
+    <div class="form-group">
+      <label for="Title">Title:</label>
+      <input type="text" formControlName="title" class="form-control">
+    </div>
+
+   <div class="form-group">
+      <label for="description4">Description:</label>
+      <input type="text" formControlName="description" class="form-control">
+   </div>
+
+    <div class="form-row">
+     <div class="form-group col-md-10"></div>
+      <div class="form-group col-md-1">
+        <input type="submit"  value="Save" class="btn btn-outline-success" [disabled]='EditPostForm.invalid' >
+      </div>
+    </div>
+
+  </form>
+</div>
+

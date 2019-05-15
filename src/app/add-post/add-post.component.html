@@ -1,0 +1,28 @@
+<div class="container alert alert-info">
+  <p class="text-center"><b><u>Add Your Data</u></b></p>
+
+
+  <form [formGroup]='ApplicationForm' (ngSubmit)="addPost()">
+   
+    <div class="form-group">
+      <label for="Title">Title:</label>
+      <input type="text" formControlName="title" class="form-control" placeholder="Title">
+    </div>
+
+   <div class="form-group">
+      <label for="description4">Description:</label>
+      <input type="text" formControlName="description" class="form-control" placeholder="Ddescription">
+   </div>
+
+    <div class="form-row">
+     <div class="form-group col-md-10"></div>
+      <div class="form-group col-md-1">
+        <input type="submit"  value="submit" class="btn btn-outline-success" [disabled]='ApplicationForm.invalid' >
+      </div>
+       <div class="form-group col-md-1">
+        <button type="button"(click)="restForm()" class="btn btn-info">Reset</button>
+      </div>
+    </div>
+
+  </form>
+</div>

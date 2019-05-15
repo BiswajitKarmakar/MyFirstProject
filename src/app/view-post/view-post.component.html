@@ -1,0 +1,21 @@
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">INdex</th>
+      <th scope="col">Title</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+
+  <tbody *ngFor="let item of posts; index as i">
+    <tr>
+      <td scope="row">{{i+1}}</td>
+      <td>{{item.title}}</td>
+      <td>{{item.description}}</td>
+    </tr>    
+  </tbody>
+</table>
+
+<router-outlet></router-outlet>
+

@@ -1,0 +1,32 @@
+
+<table class="table table-striped" *ngIf="status" >
+    <thead>
+      <tr>
+        <th scope="col">Index</th>
+        <th scope="col">Title</th>
+        <th scope="col">Description</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+
+    <tbody *ngFor="let item of posts; index as i">
+      <tr>
+        <td scope="row">{{i+1}}</td>
+        <td>{{item.title}}</td>
+        <td>{{item.description}}</td>
+        <td>
+            <div class="form-row">
+                <div class="form-group ">
+                    <a class="btn btn-primary" (click)="hideEditPost()" [routerLink]="[ './EditPost']">Edit</a>
+                </div>
+                <div class=" form-group ">
+                   
+                 </div>
+                <div class=" form-group ">
+                   <a class="btn btn-danger" [routerLink]="[ './RemovePost']"> Remove</a>
+                </div>
+              </div>
+        </td>
+      </tr>    
+    </tbody>
+  </table>
